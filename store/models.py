@@ -6,6 +6,7 @@ class Banner(models.Model):
     title = models.CharField(max_length=150)
     image = models.ImageField(upload_to='Banner')
     http_link = models.URLField(max_length=150)
+    ordering = models.IntegerField(blank=True, null=True)
 
     class Meta:
         verbose_name_plural = 'Banners'
